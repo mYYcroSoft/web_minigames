@@ -1,22 +1,39 @@
 var score = 0;
+var score = 0;
+var error = 0;
+
+
 
 function allowDrop(ev) {
     ev.preventDefault();
   }
   
-  function drag(ev) {
+  function drag(ev, color) {
     ev.dataTransfer.setData("text", ev.target.id);
-    
+    ev.dataTransfer.setData("type", color);
   }
   
-  function drop(ev) {
+  function drop(ev, trash_type) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    document.getElementById(data).remove();
-    score = score + 1; 
-    console.log(score)
-    console.log(data)
-    console.log(document.getElementById(data).value)
-    document.getElementById('score').innerHTML = score
+    var element = document.getElementById(data)
+    var item_type = ev.dataTransfer.getData("type")
+    if (trash_type == item_type){
+        score = score + 1;
+        element.remove()
+        score_update()
+    } else {
+        error = error + 1 
+        score_update()
+    }
 
+  }
+
+
+  function score_update(){
+    console.log(score)
+    console.log(error)
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('error').innerHTML = error;
+   
   }
