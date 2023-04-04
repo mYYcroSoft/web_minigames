@@ -19,16 +19,20 @@
 </style>
 <body>
     
-    <div id="score">0</div>
+    <span> Score: <div id="score">0</div></span> 
+    <span> Error: <div id="error">0</div></span> 
+ 
     <div id="div1" class="r" ondrop="drop(event, 'red')" ondragover="allowDrop(event)"></div>
     <br>
     <div id="div1" class="g" ondrop="drop(event, 'green')" ondragover="allowDrop(event)"></div>
     <br>
  <div id="drag1" draggable="true" ondragstart="drag(event, 'green')">Banán</div>
- <div id="drag1" draggable="true" ondragstart="drag(event, 'red')">Lahev</div>
- <div id="drag1" draggable="true" ondragstart="drag(event, 'Red')">Lahev</div>
- <div id="drag1" draggable="true" ondragstart="drag(event,'green')">Banán</div>
- <div id="drag1" draggable="true" ondragstart="drag(event)" value="red">Lahev</div>
+ <div id="drag1" draggable="true" ondragstart="drag(event, 'red')">Láhev</div>
+ <div id="drag1" draggable="true" ondragstart="drag(event, 'green')">Banán</div>
+ <div id="drag1" draggable="true" ondragstart="drag(event, 'red')">Láhev</div>
+ <div id="drag1" draggable="true" ondragstart="drag(event, 'green')">Banán</div>
+ <div id="drag1" draggable="true" ondragstart="drag(event, 'red')">Láhev</div>
+
     
     <script src="index.js"></script>
 </body>
