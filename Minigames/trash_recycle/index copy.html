@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trash recycle || Minigame</title>
+</head>
+<style>
+
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+
+}
+
+#drag1{
+    background-color: #585858;
+    width: 5%;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.r{  border: 3px solid #dd0000;    transition: 0.5s;}
+.r:hover{
+    transition: 0.5s;
+    border: 10px solid #2c2c2c;
+}
+.g{  border: 3px solid #157e0c;}
+.g:hover{
+    transition: 0.5s;
+    border: 10px solid #2c2c2c;
+}
+</style>
+<body>
+    
+
+
+
+    
+    <span> Score: <div id="score">0</div></span> 
+    <span> Error: <div id="error">0</div></span> 
+ 
+    <div id="div1" class="r" ondrop="drop(event, 'red')" ondragover="allowDrop(event)">Sklo</div>
+    <br>
+    <div id="div1" class="g" ondrop="drop(event, 'green')" ondragover="allowDrop(event)">Papír</div>    <br>
+    <div id="div1" class="g" ondrop="drop(event, 'green')" ondragover="allowDrop(event)">Bio</div> <br>
+    <div id="div1" class="g" ondrop="drop(event, 'green')" ondragover="allowDrop(event)">Textil</div> <br>
+    <br>
+ <div id="drag1" draggable="true" ondragstart="drag(event, 'green')">Banán</div>
+ <div id="drag1" draggable="true" ondragstart="drag(event, 'red')">Plechovka</div>
+ <div id="drag1" draggable="true" ondragstart="drag(event, 'green')">Mrkev</div>
+ <div id="drag1" draggable="true" ondragstart="drag(event, 'red')">Láhev</div>
+ <div id="drag1" draggable="true" ondragstart="drag(event, 'green')">Banán</div>
+ <div id="drag1" draggable="true" ondragstart="drag(event, 'red')">Láhev</div>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>

@@ -5,35 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trash recycle || Minigame</title>
+    <link rel="stylesheet" href="index.css">
+
 </head>
 <style>
 
-#div1 {
-  width: 350px;
-  height: 70px;
-  padding: 10px;
-
-}
-.r{  border: 3px solid #dd0000;}
-.g{  border: 3px solid #157e0c;}
 </style>
 <body>
     
-    <span> Score: <div id="score">0</div></span> 
-    <span> Error: <div id="error">0</div></span> 
- 
-    <div id="div1" class="r" ondrop="drop(event, 'red')" ondragover="allowDrop(event)"></div>
-    <br>
-    <div id="div1" class="g" ondrop="drop(event, 'green')" ondragover="allowDrop(event)"></div>
-    <br>
- <div id="drag1" draggable="true" ondragstart="drag(event, 'green')">Banán</div>
- <div id="drag1" draggable="true" ondragstart="drag(event, 'red')">Láhev</div>
- <div id="drag1" draggable="true" ondragstart="drag(event, 'green')">Banán</div>
- <div id="drag1" draggable="true" ondragstart="drag(event, 'red')">Láhev</div>
- <div id="drag1" draggable="true" ondragstart="drag(event, 'green')">Banán</div>
- <div id="drag1" draggable="true" ondragstart="drag(event, 'red')">Láhev</div>
+<div class="trash-list">
+<div class="trash-container glass" id="div1" ondrop="drop(event, 'glass')" ondragover="allowDrop(event)">
+    GLASS
+</div> 
+<div class="trash-container paper" id="div1" ondrop="drop(event, 'paper')" ondragover="allowDrop(event)">
+    PAPER
+</div>
+<div class="trash-container mw" id="div1" ondrop="drop(event, 'mw')" ondragover="allowDrop(event)">
+    MIXED WASTE
+</div>
+</div>
 
-    
+<div class="items-field">
+    <span class="items-f-t">ITEMS FOR RECYCLE</span>
+    <br>
+<div id="items-list">
+<img class="item" id="drag1" src="images/g-battle.png" draggable="true" ondragstart="drag(event, 'glass')">
+<img class="item" id="drag1" src="images/news_papers.png" draggable="true" ondragstart="drag(event, 'paper')">
+<img class="item" id="drag1" src="images/trash.png" draggable="true" ondragstart="drag(event, 'mw')">
+<img class="item" id="drag1" src="images/news_papers.png" draggable="true" ondragstart="drag(event, 'paper')">
+<img class="item" id="drag1" src="images/news_papers.png" draggable="true" ondragstart="drag(event, 'paper')">
+<img class="item" id="drag1" src="images/trash.png" draggable="true" ondragstart="drag(event, 'mw')">
+<img class="item" id="drag1" src="images/g-battle.png" draggable="true" ondragstart="drag(event, 'glass')">
+  
+</div> 
+</div>
+
+<div class="score">
+    <span class="succes">Recycled: <a id="score">0</a></span>
+    <span class="error">Wrong: <a id="error">0</a></span>
+</div>
+
+
+
     <script src="index.js"></script>
 </body>
 </html>
